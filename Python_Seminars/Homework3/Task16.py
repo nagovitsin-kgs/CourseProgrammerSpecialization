@@ -48,3 +48,11 @@ else:
             count += 1
     print(
         f'Число {x} встречается в списке A {count} раз(а)')
+
+# Ввод в каждой по строке
+N = int(input('Введите необходимое количество элементов: '))
+A = [int(input('сравниваем с числом: '))
+     for i in range(1, N+1)]
+X = int(input('К какому числу нужно найти ближайшее: '))
+
+https://pylessons.readthedocs.io/ru/latest/ читать!!!
