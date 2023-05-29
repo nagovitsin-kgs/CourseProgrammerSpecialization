@@ -21,3 +21,62 @@
 # Пример:
 # 4 -> 1 2 3 4
 # 9
+
+
+# Вариант №1:
+import random
+n = int(input('Введите кол-во кустов: n = '))
+
+berries = list(map(int, input(
+    'Введите количество ягод на кусте: ').split()))
+print(berries)
+
+x = 0
+i = 1
+
+for i in range(n):
+    if (berries[i] + berries[i+1] + berries[i-1] > x):
+        x = berries[i] + berries[i+1] + berries[i-1]
+
+print(x)
+
+
+# Вариант №2:
+n = int(input("введите количество кустов: "))
+
+berryes = list(random.randint(0, 10) for i in range(n))
+print(berryes)
+
+result = []
+i = 0
+sum = 0
+
+while (i < n):
+    if (i == n - 1):
+        sum = berryes[i] + berryes[i - 1] + berryes[0]
+    else:
+        sum = berryes[i] + berryes[i - 1] + berryes[i + 1]
+        result.append(sum)
+        result.sort()
+    i += 1
+
+print(
+    f"максимальное число ягод за одну итерацию {result[-1]}")
+
+
+# Вариант №3:
+n_bushes = int(
+    input('Введите количество кустов черники: '))
+
+arr = list()
+
+for i in range(n_bushes):
+    a = int(input('Введите количество ягод на кусте: '))
+    arr.append(a)
+
+arr_count = list()
+
+for i in range(len(arr)):
+    arr_count.append(arr[i-2] + arr[i-1] + arr[i])
+
+print(max(arr_count))
