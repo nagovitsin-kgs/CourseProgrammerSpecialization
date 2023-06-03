@@ -35,3 +35,22 @@ def exponentiation_recursion(a, b):
 
 recursion = exponentiation_recursion(a, b)
 print(f'Число {a} в степени {b} = {recursion}')
+
+# Как работает рекурсия:
+# def exponentiation_recursion(2, 3):
+#     if 3 == 0:
+#         return 1
+#     else:
+#         return 2 * (
+#             if 2 == 0:
+#                 return 1
+#             else:
+#                 return 2 * (
+#                     if 1 == 0:
+#                         return 1
+#                     else:
+#                         return 2 * (
+#                             if 0 == 0:
+#                                 return 1
+#                             else:
+#                                 return)))  # эта ветка никогда не выполнится!
