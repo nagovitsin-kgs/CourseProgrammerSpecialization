@@ -6,18 +6,16 @@
 # Input: 2 -> 3 4
 # Output: 4 3
 
+# def reverse(n: int) -> None:
+#     """Переворот строки рекурсией"""
+#     if n == 0:
+#         return print('')
+#     k = int(input())
+#     reverse(n - 1)
+#     return print(k)
 
-def reverse(n: int) -> None:
-    """Переворот строки рекурсией"""
-    if n == 0:
-        return print('')
-    k = int(input())
-    reverse(n - 1)
-    return print(k)
-
-
-n = int(input())
-reverse(n)
+# n = int(input())
+# reverse(n)
 
 #  Через составление строки
 # def f(n):
@@ -28,3 +26,12 @@ reverse(n)
 
 # n = int(input())
 # print(f(n))
+n = 2
+a = [3, 4]
+b = []
+if n == 0:
+    return print('')
+a.pop()
+b[0] = n - 1
+
+print(b)
