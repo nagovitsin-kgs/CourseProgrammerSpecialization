@@ -2,18 +2,28 @@
 # значения которых принадлежат заданному диапазону,
 # т.е. не меньше заданного минимума и не больше заданного максимума.
 # Пример:
+# Интервал от 6 до 10
 # Ввод: [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
 # Вывод: [1, 9, 13, 14, 19]
 
-list_1 = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+# Декомпозиция:
+# 1. Метод определения индексов массива в интервале от min до max;
+# 2. Функции ввода данных с клавиатуры: элементы массива, min, max;
+# 3. Вызов метода;
+# 4. Функция вывода данных (печать).
+
+
+def indexes_in_array_interval_min_max(list_1, list_2, max, min):
+    for i in range(len(list_1)):
+        if min <= list_1[i] <= max:
+            list_2.append(i)
+
+
+list_1 = list(int(list_1) for list_1 in input(f'Введите через пробел элементы массива: = ').split())
 list_2 = []
-max = 10
-min = 6
-# for i in range(len(lst_1)):
-#     if list_1[i] >= min and list_1[i] <= max:
-#         list_2.append(i)
-# print(list_2)
-# или
-for i in range(len(list_1)):
-    if min <= list_1[i] <= max:
-        print(i, end=' ')
+max = int(input("Введите интервал заданного max = "))
+min = int(input("Введите интервал заданного min = "))
+
+indexes_in_array_interval_min_max(list_1, list_2, max, min)
+print(f'list_1 = {list_1} \nИндексы элементов массива,значения которых принадлежат заданному диапазону от {min} до {max}: \nlist_2 = {list_2}')
+      
