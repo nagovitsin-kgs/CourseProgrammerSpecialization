@@ -364,39 +364,60 @@ data.close()
 # import os
 # Познакомимся с базовыми функциями данного модуля:
 
-# ● os.chdir(path) - смена текущей директории.
-# (Функция chdir() модуля os изменяет текущий рабочий каталог. Аргумент path может принимать объекты, представляющие путь файловой системы, такие как pathlib.)
-import os
-os.chdir('C:/Users/79190/PycharmProjects/GB')
-# ● os.getcwd() - текущая рабочая директория
+# ● os.chdir(path) - смена текущей директории:
+# (Функция chdir() модуля os изменяет текущий рабочий каталог. Аргумент path может принимать объекты, представляющие путь файловой системы, такие как pathlib.):
+
 # import os
-# print(os.getcwd())  # 'C:\Users\79190\PycharmProjects\webproject'
+# os.chdir('C:\Users\nagovitsin\Desktop\CourseProgrammerSpecialization')
+
+# ● os.getcwd() - текущая рабочая директория:
+
+import os
+print(os.getcwd())  # 'C:\Users\nagovitsin\Desktop\CourseProgrammerSpecialization'
 
 # Модуль os:
+
 # ● os.path - является вложенным модулем в модуль os и реализует некоторые полезные функции для работы с
 # путями, такие как:
-# ○ os.path.basename(path) - базовое имя пути
-# import os
-# print(os.path.basename('C:/Users/79190/PycharmProjects/webproject/main.py'))  # 'main.py'
-# ● os.path.abspath(path) - возвращает нормализованный абсолютный путь.
-# import os
-# print(os.path.abspath('main.py'))  # 'C:/Users/79190/PycharmProjects/webproject/main.py'
+# ○ os.path.basename(path) - базовое имя пути:
+
+import os
+print(os.path.basename('c:/Users/nagovitsin/Desktop/CourseProgrammerSpecialization/Python_Lectures/Lecture4/Lecture4.py'))  # Lecture4.py
+
+# ● os.path.abspath(path) - возвращает нормализованный абсолютный путь:
+
+import os
+print(os.path.abspath('Lecture4.py'))  # 'C:\Users\nagovitsin\Desktop\CourseProgrammerSpecialization\Lecture4.py'
 # Это лишь малая часть возможностей модуля os.
 
 # ///////////////////////////////////////////////////
 
 # Модуль shutil:
 
-# Модуль shutil содержит набор функций высокого уровня для обработки файлов, групп файлов, и папок. В частности,
-# доступные здесь функции позволяют копировать, перемещать и удалять файлы и папки. Часто используется вместе
-# с модулем os.
+# Модуль shutil содержит набор функций высокого уровня для обработки файлов, групп файлов, и папок.
+# В частности, доступные здесь функции позволяют копировать, перемещать и удалять файлы и папки.
+# Часто используется вместе с модулем os.
 # Для того, чтобы начать работать с данным модулем необходимо его импортировать в свою программу:
 # import shutil
+
 # Познакомимся с базовыми функциями данного модуля:
+
 # ● shutil.copyfile(src, dst) - копирует содержимое (но не метаданные) файла src в файл dst.
-# ● shutil.copy(src, dst) - копирует содержимое файла src в файл или папку dst.
+import shutil
+src = 'file.txt'
+dst = 'file2.txt'
+shutil.copyfile(src, dst)
+
+# ● shutil.copy(src, dst) - копирует содержимое файла src в файл или папку dst:
+
+import shutil
+src = 'file.txt'
+dst = 'file2.txt'
+shutil.copyfile(src, dst)
+
 # ● shutil.rmtree(path) - Удаляет текущую директорию и все поддиректории; path должен указывать на
-# директорию, а не на символическую ссылку.
+# директорию, а не на символическую ссылку:
+# - осторожно с этой функцией!!! (можно грохнуть!!!)
 
 # Итоги:
 
@@ -407,5 +428,5 @@ os.chdir('C:/Users/79190/PycharmProjects/GB')
 # ○ lambda
 # ○ enumerate
 
-# ● Научили работать с файлами
+# ● Научились работать с файлами
 # ● Изучили библиотеки для работы с операционной системой и файлами
