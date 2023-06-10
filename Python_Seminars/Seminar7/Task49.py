@@ -60,6 +60,7 @@
 # print(*find_farthest_orbit(orbits))
 
 
+# /////////
 def find_farthest_orbit(list_of_orbits):
     list_of_elliptical_orbits = [i for i in list_of_orbits if i[0] != i[1]]
     list_of_areas = [(i[0] * i[1]) for i in list_of_elliptical_orbits]
@@ -69,7 +70,7 @@ def find_farthest_orbit(list_of_orbits):
 
 orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
 print(*find_farthest_orbit(orbits))
-
+# /////////
 # import math
 
 # list_of_orbits = [(1, 3), (2.5, 10), (7, 2), (11, 11), (4, 3)]
@@ -78,3 +79,12 @@ print(*find_farthest_orbit(orbits))
 #     return max(list_of_orbits, key=lambda x: x[0] * x[1] * math.pi if x[0] != x[1] else 0)
 
 # print(find_farthest_orbit(list_of_orbits))
+# ////////
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+
+
+def find_farthest_orbit(orbits):
+    return max(orbits, key=lambda x: x[0] * x[1] if x[0] != x[1] else -1)
+
+
+print(find_farthest_orbit(orbits))
