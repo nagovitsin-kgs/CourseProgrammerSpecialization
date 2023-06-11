@@ -11,39 +11,25 @@
 # ** Ввод: ** пара - ра - рам рам - пам - папам па - ра - па - да
 # ** Вывод:** Парам пам - пам
 
+# vowel_count (количество гласных)
+# my_string (моя строка)
+# vowel_list (список гласных)
+# sing (петь)
 
-# 1:
-def vowel_count(my_str):
-    vowel_list = [ 'а', 'и', 'е', 'ё', 'о', 'у', 'ы', 'э', 'ю', 'я']
+
+def vowel_count(my_string):
+    vowel_list = ['а', 'и', 'е', 'ё', 'о', 'у', 'ы', 'э', 'ю', 'я']
     count = 0
-    for i in my_str:
-        if i in vowel_list: count += 1
+    for i in my_string:
+        if i in vowel_list:
+            count += 1
     return count
 
 
-poem = input('введите стих: ')
-poem = poem.split()
-if len(set(map(vowel_count, poem))) == 1:
-    print('Парам пам-пам')
-else:
-    print('Пам парам')   
-
-
-# 2:
-def rhythm(str):
-    str = str.split()
-    list_1 = []
-    for word in str:
-        sum_w = 0
-        for i in word:
-            if i in 'аеёиоуыэюя':
-                sum_w += 1
-        list_1.append(sum_w)
-    return len(list_1) == list_1.count(list_1[0])
-
-
-str_1 = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
-if rhythm(str_1):
+sing = input('Введите стихотворение: ')
+sing = sing.split()
+if len(set(map(vowel_count, sing))) == 1:
     print('Парам пам-пам')
 else:
     print('Пам парам')
+
