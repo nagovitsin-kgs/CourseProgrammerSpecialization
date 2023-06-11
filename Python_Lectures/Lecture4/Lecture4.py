@@ -334,7 +334,7 @@ with open('file.txt', 'w') as data:
     data.write('line 1\n')
     data.write('line 2\n')
 """
-# 2. Режим r (r – открытие для чтения данных)
+# 2. Режим r (readlines) (r – открытие для чтения данных)
 
 # ● Чтение данных из файла:(path -путь), (line - строка)
 """
