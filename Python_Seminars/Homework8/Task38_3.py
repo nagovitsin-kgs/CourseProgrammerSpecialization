@@ -2,7 +2,8 @@
 # Пользователь также может ввести имя или фамилию, и Вы должны реализовать функционал
 # для изменения и удаления данных.
 
-file_path = r'C:\Users\tima0\Desktop\Учеба\Python_Course\Homework\Python_Homework\phonebook.txt'
+# file_path = r'C:\Users\tima0\Desktop\Учеба\Python_Course\Homework\Python_Homework\phonebook.txt'
+file_path = r'C:\Users\nagovitsin\Desktop\CourseProgrammerSpecialization\phonebook.txt'
 
 
 def add_number():
@@ -35,7 +36,7 @@ def phonebook_change():
         modified_line = input('Введите новое ФИО и номер или ничего не вводите для удаления строки: ') + '\n'
         for i in range(len(phoneb)):
             if phoneb[i].casefold().find(number) != -1: phoneb[i] = modified_line
-        phoneb = ''.join(phoneb)   
+        phoneb = ''.join(phoneb)
     with open(file_path, 'w') as p:
         p.write(phoneb)
 
@@ -50,4 +51,4 @@ while True:
     else:
         print('Некорректный ввод')
     print()
-    print()      
+    print()

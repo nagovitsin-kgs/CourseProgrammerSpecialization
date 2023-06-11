@@ -127,7 +127,7 @@ actions = {'1': 'список',
 
 action = None
 while action != 'q':
-    print('Какое действие хотите совершить?',
+    print('\nКакое действие хотите совершить?',
           *[f'{i} - {actions[i]}' for i in actions])
     action = input()
     while action not in actions:
