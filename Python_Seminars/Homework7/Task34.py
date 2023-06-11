@@ -21,7 +21,6 @@ def vowel_count(my_str):
     return count
 
 
-# poem = 'пара-ра-рам рам-пам-папам па-ра-па-дам'
 poem = input('введите стих: ')
 poem = poem.split()
 if len(set(map(vowel_count, poem))) == 1:
