@@ -1,2 +1,7 @@
-Аристотель: "Свободный человек — тот, который существует ради себя, а не ради другого."
-
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua.
+Hello
+Hello
+Hello
